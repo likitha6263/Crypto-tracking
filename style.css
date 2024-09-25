@@ -1,0 +1,113 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background for the dark theme */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #ececec;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+#loader {
+  font-size: 24px;
+  color: #e67e22;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Darker shadow for dark theme */
+  padding: 25px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  background-color: #2c2c2c; /* Slightly lighter shade on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* More intense shadow on hover */
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  background-color: #2f2f2f;
+  padding: 10px;
+}
+
+.card h2 {
+  font-size: 22px;
+  color: #00b894; /* Bright teal color for headers */
+  margin-bottom: 10px;
+}
+
+.card .symbol {
+  background-color: #0984e3; /* Blue background for symbol badge */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.card .price {
+  font-size: 18px;
+  color: #55efc4; /* Light green color for the price */
+  margin: 10px 0;
+}
+
+.card .market-cap {
+  font-size: 14px;
+  color: #b2bec3; /* Soft gray color */
+}
+
+.card .ath {
+  font-size: 12px;
+  color: #d63031; /* Red for all-time high */
+  margin-top: 10px;
+}
+
+.card .view-more {
+  font-size: 14px;
+  color: #74b9ff;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: color 0.3s;
+}
+
+.card .view-more:hover {
+  color: #81ecec;
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
